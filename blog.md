@@ -1,9 +1,11 @@
 ---
 permalink: /blog
+DISABLED_redirect_from:
+  - /blog
 layout: page
 ---
 
-<h2>All blogposts</h2>
+<h2>All works</h2>
 <ul class="feed">
   {%- for post in site.posts -%}
   <li class="feed-entry">
