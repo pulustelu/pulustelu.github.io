@@ -10,7 +10,7 @@ links:
 {% include fig 
     img="/assets/images/works/utopia-divine/lonely.png"
     alt="A lonely file in a folder"
-    width="769"
+    width="725"
 %}
 
 *Utopia Divine* is a programming language of desire, of hope, of beauty.
