@@ -24,7 +24,7 @@ ${{ color.name }}: {{ color.hex }};
     // https://github.com/system-fonts/modern-font-stacks#transitional
     --body-font: Charter, /* macos, ios */
         'Bitstream Charter', /* various linuxes */
-        'Sitka Text' /* windows 8 */
+        'Sitka Text', /* windows 8 */
         Cambria, /* windows 7 */
         serif; /* fallback */
 }
