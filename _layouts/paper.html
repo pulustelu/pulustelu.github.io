@@ -10,7 +10,7 @@ layout: default
     {% endfor %}
     }
 </script>
-<canvas id="canvas">
+<canvas id="canvas" class="initially-hidden">
     <!-- prerendered tiling image for nojs clients -->
 </canvas>
 <main>
@@ -26,7 +26,7 @@ layout: default
         <a class="nav-link" href="{{ "/about" | relative_url }}">about</a>
     </div>
     </nav>
-    <hr />
+    <hr>
     {{ content }}
     <iframe src="https://qwd.grebedoc.dev/qwdring/olivia/banner.html", width="400", height="40"></iframe>
 </main>

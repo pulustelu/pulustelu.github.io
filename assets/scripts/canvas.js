@@ -1,9 +1,12 @@
 "use strict";
 let COLORS;
-addEventListener("DOMContentLoaded", _ => {
+addEventListener("DOMContentLoaded", (_) => {
     const CANVAS_ELEMENT_ID = "canvas";
     const USABLE_COLORS = [
-        COLORS.tomato, COLORS.foliage, COLORS.velvet, COLORS.gold
+        COLORS.tomato,
+        COLORS.foliage,
+        COLORS.velvet,
+        COLORS.gold,
     ];
     const strHash = (s) => {
         let hash = 0;
@@ -27,17 +30,19 @@ addEventListener("DOMContentLoaded", _ => {
     const CANVAS = document.getElementById(CANVAS_ELEMENT_ID);
     const CTX = CANVAS.getContext("2d");
     // Resize canvas to fit smoothly on the screen
-    // At the moment this causes a bit of flickering when changing the screen size 
+    // At the moment this causes a bit of flickering when changing the screen size
     // suddenly, as well as slight wobbling when changing it slowly
     CTX.canvas.width = window.innerWidth;
     CTX.canvas.height = window.innerHeight;
     const updateDimensions = () => {
         CTX.canvas.width = window.innerWidth;
         CTX.canvas.height = window.innerHeight;
-        WIDTH = Math.min(Math.floor(window.innerWidth / GRID_SCALE / VISUAL_SCALE * HIDDEN_SCALE + 2 * VISUAL_PADDING), MAX_CANVAS_SIZE);
-        HEIGHT = Math.min(Math.floor(window.innerHeight / GRID_SCALE / VISUAL_SCALE * HIDDEN_SCALE + 2 * VISUAL_PADDING), MAX_CANVAS_SIZE);
+        WIDTH = Math.min(Math.floor((window.innerWidth / GRID_SCALE / VISUAL_SCALE) * HIDDEN_SCALE +
+            2 * VISUAL_PADDING), MAX_CANVAS_SIZE);
+        HEIGHT = Math.min(Math.floor((window.innerHeight / GRID_SCALE / VISUAL_SCALE) * HIDDEN_SCALE +
+            2 * VISUAL_PADDING), MAX_CANVAS_SIZE);
     };
-    addEventListener("resize", _ => {
+    addEventListener("resize", (_) => {
         updateDimensions();
         redraw();
     });
@@ -53,7 +58,7 @@ addEventListener("DOMContentLoaded", _ => {
         [2, 1],
     ];
     const randomInt = (from, to) => Math.floor(Math.random() * to) + from;
-    const getPoints = ([x, y], direction) => KEY.map(d => {
+    const getPoints = ([x, y], direction) => KEY.map((d) => {
         const [dx, dy] = DIRECTIONS[direction];
         return [x + dx * d, y + dy * d];
     });
@@ -128,7 +133,8 @@ addEventListener("DOMContentLoaded", _ => {
             randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex--;
             [array[currentIndex], array[randomIndex]] = [
-                array[randomIndex], array[currentIndex]
+                array[randomIndex],
+                array[currentIndex],
             ];
         }
         return array;
@@ -173,4 +179,5 @@ addEventListener("DOMContentLoaded", _ => {
     for (let i = 0; i < 1000; i++) {
         drawRandomExpanse(occupied);
     }
+    CANVAS.className = "";
 });
