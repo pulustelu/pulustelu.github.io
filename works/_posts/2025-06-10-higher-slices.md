@@ -3,7 +3,7 @@ layout: post
 title: Higher Slices
 slug: higher-slices
 links:
-    exhibition website (broken url): http://matharts.aalto.fi/exhibition2025/HigherSlices.pdf
+    exhibition website: http://matharts.aalto.fi/exhibition2025/HigherSlices.pdf
 ---
 
 {% include fig 
