@@ -1,6 +1,6 @@
 "use strict";
 let COLORS;
-addEventListener("load", _ => {
+addEventListener("DOMContentLoaded", _ => {
     const CANVAS_ELEMENT_ID = "canvas";
     const USABLE_COLORS = [
         COLORS.tomato, COLORS.foliage, COLORS.velvet, COLORS.gold
