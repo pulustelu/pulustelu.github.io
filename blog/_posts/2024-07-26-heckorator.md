@@ -60,13 +60,13 @@ the idea and moved on to other silly things.
 
 When I found this folder on my laptop yesterday, I was reminded of how cool and silly I thought
 the idea was. It felt like a shame for it to never see the light of day, so I immediately fixed
-the design flaws by adding a border 😄 A little break helps a lot with problem-solving!
+the design flaws by adding a border :) A little break helps a lot with problem-solving!
 
 I guess I don't have much else to add there. If you have old projects that you never got around
 to finishing, go take a look! You might have forgotten about them, but there could be uncut gems
 lying around!
 
-That's all! Bye bye, have fun with your projects! 😄
+That's all! Bye bye, have fun with your projects :)
 
 [pypi]: https://pypi.org/project/heckorator
 [gh]: https://github.com/RocketRace/heckorator
