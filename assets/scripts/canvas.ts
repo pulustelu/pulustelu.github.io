@@ -1,5 +1,5 @@
 let COLORS: {[s in string]: string};
-addEventListener("load", _ => {
+addEventListener("DOMContentLoaded", _ => {
   const CANVAS_ELEMENT_ID = "canvas";
 
   const USABLE_COLORS = [
