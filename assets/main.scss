@@ -21,16 +21,12 @@ ${{ color.name }}: {{ color.hex }};
         Consolas, /* windows 7 */
         'DejaVu Sans Mono', /* various linuxes */
         monospace; /* fallback */
-    --title-font: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
-    --body-font: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
-    // https://github.com/system-fonts/modern-font-stacks#neo-grotesque
-    --body-font2: Inter, /* various linuxes */
-        Roboto, /* android, various linuxes */
-        'Helvetica Neue', /* macos, ios */
-        'Arial Nova', /* windows 10 */
-        'Nimbus Sans', /* various linuxes */
-        Arial /* windows */
-        sans-serif; /* fallback */
+    // https://github.com/system-fonts/modern-font-stacks#transitional
+    --body-font: Charter, /* macos, ios */
+        'Bitstream Charter', /* various linuxes */
+        'Sitka Text' /* windows 8 */
+        Cambria, /* windows 7 */
+        serif; /* fallback */
 }
 
 // navbar
@@ -43,7 +39,6 @@ nav {
   justify-content: center;
   padding: 1rem 0;
   margin: 0.5rem;
-  font-family: var(--title-font);
 }
 
 @media screen and (max-width: 899px) {
@@ -93,7 +88,6 @@ hr.small-divider {
 h1, h2, h3 {
   color: $darktomato;
   font-weight: normal;
-  font-family: var(--title-font);
 }
 
 h2 {
