@@ -12,6 +12,27 @@ ${{ color.name }}: {{ color.hex }};
 }
 {% endfor %}
 
+:root {
+    // https://github.com/system-fonts/modern-font-stacks#monospace-code
+    --code-font: ui-monospace, /* if available */
+        'Cascadia Code' /* windows 11 */,
+        'Source Code Pro' /* various linuxes */,
+        Menlo, /* macos */
+        Consolas, /* windows 7 */
+        'DejaVu Sans Mono', /* various linuxes */
+        monospace; /* fallback */
+    --title-font: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+    --body-font: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+    // https://github.com/system-fonts/modern-font-stacks#neo-grotesque
+    --body-font2: Inter, /* various linuxes */
+        Roboto, /* android, various linuxes */
+        'Helvetica Neue', /* macos, ios */
+        'Arial Nova', /* windows 10 */
+        'Nimbus Sans', /* various linuxes */
+        Arial /* windows */
+        sans-serif; /* fallback */
+}
+
 // navbar
 nav {
   max-width: 100%;
@@ -22,6 +43,7 @@ nav {
   justify-content: center;
   padding: 1rem 0;
   margin: 0.5rem;
+  font-family: var(--title-font);
 }
 
 @media screen and (max-width: 899px) {
@@ -45,7 +67,7 @@ nav {
 
 .nav-link {
   margin: 0 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .nav-link {
@@ -71,6 +93,7 @@ hr.small-divider {
 h1, h2, h3 {
   color: $darktomato;
   font-weight: normal;
+  font-family: var(--title-font);
 }
 
 
@@ -103,7 +126,8 @@ body {
   min-height: 125%;
   // main colors and fonts
   background-color: $bright;
-  font-family: "Noto Sans";
+  font-family: var(--body-font);
+  font-size-adjust: ex-height 0.5;
 }
 
 main {
@@ -180,7 +204,7 @@ a.title-link:hover {
 
 // tables
 table {
-  margin-left: auto; 
+  margin-left: auto;
   margin-right: auto;
   border-spacing: 0;
   border-radius: 2px;
@@ -252,6 +276,10 @@ iframe {
   border-radius: 5px;
   padding: 2px;
   overflow-x: scroll;
+}
+
+code {
+    font-family: var(--code-font);
 }
 
 .highlight {
